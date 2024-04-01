@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Jared-De-Monteiro-s-workspace-ud437e.us-east-1.xata.sh/db/HUBS",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
