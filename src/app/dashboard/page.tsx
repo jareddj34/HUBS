@@ -36,15 +36,15 @@ export default async function Dashboard() {
         revalidatePath("/");
     }
 
-    const files = await xataClient.db.files.getMany();
-    async function createFile(formData: FormData) {
-        "use server";
-        const parsedFile = schema.parse({ name: formData.get("name") });
+    // const files = await xataClient.db.files.getMany();
+    // async function createFile(formData: FormData) {
+    //     "use server";
+    //     const parsedFile = schema.parse({ name: formData.get("name") });
 
-        const newRecord = { ...parsedFile };
-        const xataClient = getXataClient();
-        await xataClient.db.files.create(newRecord);
-    }
+    //     const newRecord = { ...parsedFile };
+    //     const xataClient = getXataClient();
+    //     await xataClient.db.files.create(newRecord);
+    // }
 
     return (
         <>
@@ -56,12 +56,12 @@ export default async function Dashboard() {
                         <p key={folder.id}>{folder.name}</p>
                     ))}
                 </div>
-                <FileUpload handleCreateFile={createFile} />
+                {/* <FileUpload handleCreateFile={createFile} />
                 <div>
                     {files.map((file) => (
                         <p key={file.id}>{file.id}</p>
                     ))}
-                </div>
+                </div> */}
                 <Image
                     src={
                         "https://us-east-1.storage.xata.sh/ilu8an8obp6lb3fef3s42ccf9k"

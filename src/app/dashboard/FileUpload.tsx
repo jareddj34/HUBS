@@ -8,9 +8,9 @@ const options = {
 };
 
 export default function FileUpload({
-    handelCreateFile,
+    handleCreateFile,
 }: {
-    handelCreateFile: (formData: FormData) => void;
+    handleCreateFile: (formData: FormData) => void;
 }) {
     return (
         <>
